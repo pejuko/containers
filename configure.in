@@ -1,0 +1,26 @@
+# Process this file with autoconf to produce a configure script.
+
+AC_INIT(list.c)
+AM_INIT_AUTOMAKE(containers, 0.1)
+AM_CONFIG_HEADER(config.h)
+
+AC_PROG_LIBTOOL
+AC_SUBST(LIBTOOL_DEPS)
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADER([stdlib.h],
+		[AC_DEFINE(HAVE_STDLIB_H)],
+		[AC_MSG_ERROR([You have not stdlib.h])])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+
+AC_OUTPUT(Makefile)

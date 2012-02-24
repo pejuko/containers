@@ -1,0 +1,81 @@
+2003-05-20 23:04  pejuko
+
+	* .cvsignore (1.3), Makefile (1.4), Makefile.am (1.1),
+	Makefile.in.old (1.1), autogen.sh (1.1), configure.in (1.1): adding
+	autotools support
+
+2003-04-13 14:01  pejuko
+
+	* Makefile (1.3): [no log message]
+
+2003-04-13 13:52  pejuko
+
+	* Makefile (1.2): added section clean to Makefile
+
+2003-04-13 13:49  pejuko
+
+	* Makefile (1.1): adding common Makefile
+
+2003-04-13 13:06  pejuko
+
+	* list.h (1.3), list.h (1.4): [no log message]
+
+2003-04-13 12:41  pejuko
+
+	* bin_tree.c (1.6), bin_tree.c (1.7), bin_tree.c (1.8), bin_tree.c
+	(1.9): [no log message]
+
+2003-04-13 12:37  pejuko
+
+	* bin_tree.c (1.4), bin_tree.c (1.5): [no log message]
+
+2003-04-03 22:14  pejuko
+
+	* bin_tree.c (1.3): oprava preklepu
+
+2003-02-05 23:51  pejuko
+
+	* bin_tree.c (1.2), bin_tree.h (1.2): 
+	add functions: bin_tree_rem_node, bin_tree_del_node,
+	bin_tree_search
+
+2003-02-03 23:17  pejuko
+
+	* bin_tree.c (1.1), bin_tree.h (1.1): 
+	adding files for binary search tree
+
+2003-02-03 22:18  pejuko
+
+	* tree.c (1.2), tree.h (1.2): 
+	Commenting tree.h a repairing some bugs in tree.c.
+
+2003-02-01 20:52  pejuko
+
+	* list.h (1.2): 
+	add comments to functions
+
+2003-02-01 20:41  pejuko
+
+	* list.c (1.2): 
+	when was trying insert item before last item so its happen that it
+	was added to end of list
+
+2002-08-06 20:50  pejuko
+
+	* .cvsignore (1.2): 
+	uprava
+
+2002-08-06 20:46  pejuko
+
+	* .cvsignore (1.1): pridani .cvsignore
+
+2002-08-06 20:37  pejuko
+
+	* list.c (1.1.1.1), list.h (1.1.1.1), tree.c (1.1.1.1), tree.h
+	(1.1.1.1) (utags: start): vlozeni do cvs stromu
+
+2002-08-06 20:37  pejuko
+
+	* list.c (1.1), list.h (1.1), tree.c (1.1), tree.h (1.1): Initial
+	revision
+

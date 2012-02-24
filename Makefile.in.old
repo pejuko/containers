@@ -1,0 +1,36 @@
+CC=@CC@
+CFLAGS=@CFLAGS@
+LIBS=@LIBS@
+LDFLAGS=@LDFLAGS@
+PREFIX=@prefix@
+
+HEADERS=list.h tree.h bin_tree.h
+LIB_FILES=libcontainers.so# libcontainers.a
+OBJS=list.o tree.o #bin_tree.o
+
+all: Makefile config.h configure $(OBJS)
+	ld -shared -o libcontainers.so $(OBJS) $(LDFLAGS) $(LIBS)
+#	ld -static -o containers.a  $(OBJS) $(LDFLAGS) $(LIBS)
+
+install: $(LIB_FILES)
+	mkdir -p $(PREFIX)/include && cp $(HEADERS) $(PREFIX)/include
+	mkdir -p $(PREFIX)/lib && cp $(LIB_FILES) $(PREFIX)/lib
+
+Makefile: Makefile.in
+	./configure --prefix=$(PREFIX)
+config.h: config.h.in
+	autoconf
+configure: configure.in
+	autoconf
+
+list.o: list.c list.h
+	$(CC) $(CFLAGS) -c list.c
+
+tree.o: tree.c tree.h
+	$(CC) $(CFLAGS) -c tree.c
+
+bin_tree.o: bin_tree.c bin_tree.h
+	$(CC) $(CFLAGS) -c bin_tree.c
+
+clean:
+	-rm -f *.o *~ *.so *.a
